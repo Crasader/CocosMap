@@ -71,6 +71,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setContentScaleFactor(MIN(smallResolutionSize.height/designResolutionSize.height, smallResolutionSize.width/designResolutionSize.width));
     }
 
+    FileUtils::getInstance()->addSearchPath("res");
+
     register_all_packages();
 
     // create a scene. it's an autorelease object
